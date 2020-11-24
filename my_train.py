@@ -63,10 +63,9 @@ def main():
     accuracy = model.score(x_test, y_test)
     run.log("Accuracy", np.float(accuracy))
     
-    print(accuracy)
-    print('Finito!')
 
 if __name__ == '__main__':
+    
     # TODO: Create TabularDataset using TabularDatasetFactory
     # Data is located at:
     # "https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv"
@@ -79,10 +78,6 @@ if __name__ == '__main__':
 
     x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.25, random_state=37)   
 
-    
-    
-    
-    
     main()
 
 
