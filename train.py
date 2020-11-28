@@ -57,7 +57,7 @@ def main():
 # Data is located at:
 # "https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv"
 
-    ds = Dataset.Tabular.from_delimited_files(path = "https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv", separator=',', encoding='utf8')
+    ds = Dataset.Tabular.from_delimited_files(path = "https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv")
 
     x, y = clean_data(ds)
 
@@ -71,6 +71,9 @@ def main():
 
     accuracy = model.score(x_test, y_test)
     run.log("Accuracy", np.float(accuracy))
+    
+    os.makedirs('outputs', exist_ok=True)
+    joblib.dump(value = model, filename = './outputs/model.joblib')
 
 if __name__ == '__main__':
     main()
