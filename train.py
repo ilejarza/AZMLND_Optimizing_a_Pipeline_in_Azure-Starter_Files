@@ -67,13 +67,14 @@ def main():
 
 
 
-    model = LogisticRegression(C=args.C, max_iter=args.max_iter).fit(x_train, y_train)
+    model_skl = LogisticRegression(C=args.C, max_iter=args.max_iter).fit(x_train, y_train)
 
-    accuracy = model.score(x_test, y_test)
+    accuracy = model_skl.score(x_test, y_test)
     run.log("Accuracy", np.float(accuracy))
     
     os.makedirs('outputs', exist_ok=True)
-    joblib.dump(value = model, filename = './outputs/model.joblib')
+    
+    joblib.dump(model_skl, filename = 'outputs/model_skl.joblib')
 
 if __name__ == '__main__':
     main()

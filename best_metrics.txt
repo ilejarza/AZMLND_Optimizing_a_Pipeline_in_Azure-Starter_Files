@@ -1,0 +1,5 @@
+ best_run = hyperdrive_run.get_best_run_by_primary_metric()
+    best_run_metrics = best_run.get_metrics()
+    print('Best accuracy: {}'.format(best_run_metrics['Accuracy']))
+    best_run.register_model(model_name='mnist_keras', 
+                            model_path='outputs/mnist_model.hdf5')
