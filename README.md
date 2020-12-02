@@ -26,7 +26,7 @@ In order to run the algortihm, two parameters were defined:
 
 - C: a positive float number, which is the Inverse of regularization strength, and was set to a default of 1 (the greater the vaue, the lesser the regularization). 
 
--max_iter: a positive integer, meaning the number of iterations the algortihm is allowed to run before convergence (default set to 100).
+- max_iter: a positive integer, meaning the number of iterations the algortihm is allowed to run before convergence (default set to 100).
 
 Aferwards, this same script was uploaded to an AzureML notebook space, and a notebook was used to run an HyperDrive experiment, trying to get, automatically, the best model parameters for the original script.
 
