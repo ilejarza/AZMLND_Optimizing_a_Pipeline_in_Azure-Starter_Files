@@ -1,18 +1,28 @@
 # Optimizing an ML Pipeline in Azure
 
+## Table of Contents
+
+- [Optimizing an ML Pipeline in Azure](#optimizing-an-ml-pipeline-in-azure)
+  * [Overview](#overview)
+  * [Summary](#summary)
+  * [Scikit-learn Pipeline](#scikit-learn-pipeline)
+  * [AutoML](#automl)
+  * [Pipeline comparison](#pipeline-comparison)
+  * [Future work](#future-work)
+  * [Proof of cluster clean up](#proof-of-cluster-clean-up)
+
+
+
 ## Overview
 This project is part of the Udacity Azure ML Nanodegree.
-In this project, we build and optimize an Azure ML pipeline using the Python SDK and a provided Scikit-learn model.
+In this project, I build and optimize an Azure ML pipeline using the Python SDK and a provided Scikit-learn model.
 This model is then compared to an Azure AutoML run.
 
 ## Summary
-**In 1-2 sentences, explain the problem statement: e.g "This dataset contains data about... we seek to predict..."**
 
-This is a subset of a standard machine learning dataset with data about the direct marketing campaigns of a Portuguese banking institution. It provides 20 independent variables, both numerical and categorical, about bank clientes, and a categorical dependant variables: has the client subscribed a term deposit? (binary: 'yes','no'). This last one variable is what try to predict in this classifcation excersise.
+This is a subset of a standard machine learning dataset with data about the direct marketing campaigns of a Portuguese banking institution. It provides 20 independent variables, both numerical and categorical, about bank clients, and a categorical dependant variables: has the client subscribed a term deposit? (binary: 'yes','no'). This last one variable is what I try to predict in this classifcation excersise.
 
-**In 1-2 sentences, explain the solution: e.g. "The best performing model was a ..."**
-
-The best performing model I found was a VotingEnsemble, generated in the AutoML part of the AzureML experiment, that got a 0.9146 of accuracy.
+The best performing model I found was a VotingEnsemble, generated in the AutoML part of the AzureML experiment, that got a 0.9161 of accuracy. It must be said that best models were all in the range between 0.911 and the above mentioned 0.916.
 
 
 ## Scikit-learn Pipeline
@@ -26,7 +36,7 @@ In order to run the algortihm, two parameters were defined:
 
 - C: a positive float number, which is the Inverse of regularization strength, and was set to a default of 1 (the greater the vaue, the lesser the regularization). 
 
-- max_iter: a positive integer, meaning the number of iterations the algortihm is allowed to run before convergence (default set to 100).
+-max_iter: a positive integer, meaning the number of iterations the algortihm is allowed to run before convergence (default set to 100).
 
 Aferwards, this same script was uploaded to an AzureML notebook space, and a notebook was used to run an HyperDrive experiment, trying to get, automatically, the best model parameters for the original script.
 
