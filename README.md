@@ -16,11 +16,15 @@
 ## Overview
 
 This project is part of the Udacity Azure ML Nanodegree.
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4a2bded0e1aa57b58c133c66679658c0f9171660
 In this project, I build and optimize an Azure ML pipeline using the Python SDK and a provided Scikit-learn model.
 This model is then compared to an Azure AutoML run.
 
 ## Summary
+<<<<<<< HEAD
 
 This is a subset of a standard machine learning dataset with data about the direct marketing campaigns of a Portuguese banking institution. It provides 20 independent variables, both numerical and categorical, about bank clients, and a categorical dependant variables: has the client subscribed a term deposit? (binary: 'yes','no'). This last one variable is what I try to predict in this classifcation excersise.
 
@@ -37,6 +41,11 @@ The process is summarised in the folowing diagram:
 ![Alt text](./Proyecto1.svg)
 <img src="./Proyecto1.svg">
 
+=======
+
+This is a subset of a standard machine learning dataset with data about the direct marketing campaigns of a Portuguese banking institution. It provides 20 independent variables, both numerical and categorical, about bank clients, and a categorical dependant variables: has the client subscribed a term deposit? (binary: 'yes','no'). This last one variable is what I try to predict in this classifcation excersise.
+
+>>>>>>> 4a2bded0e1aa57b58c133c66679658c0f9171660
 The best performing model I found was a VotingEnsemble, generated in the AutoML part of the AzureML experiment, that got a 0.9161 of accuracy. It must be said that best models were all in the range between 0.911 and the above mentioned 0.916.
 
 
