@@ -22,7 +22,7 @@ This model is then compared to an Azure AutoML run.
 
 ## Summary
 
-This is a subset of a standard machine learning dataset with data about the direct marketing campaigns of a Portuguese banking institution. It provides 20 independent variables, both numerical and categorical, about bank clients, and a categorical dependant variables: has the client subscribed a term deposit? (binary: 'yes','no'). This last one variable is what I try to predict in this classifcation excersise.
+A subset of a standard machine learning dataset, with data about the direct marketing campaigns of a Portuguese banking institution, will be used to predict a client class. It provides 20 independent variables, both numerical and categorical, about bank clients, and a categorical dependant variables: has the client subscribed a term deposit? (binary: 'yes','no'). This last one variable is what I try to predict in this classifcation excersise.
 
 To that end, I'm trying three diferent ways to get an accurate model:
 
