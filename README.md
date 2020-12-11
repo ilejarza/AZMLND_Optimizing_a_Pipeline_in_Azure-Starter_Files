@@ -1,4 +1,3 @@
-
 # Optimizing an ML Pipeline in Azure
 
 ## Table of Contents
@@ -10,19 +9,24 @@
   * [AutoML](#automl)
   * [Pipeline comparison](#pipeline-comparison)
   * [Future work](#future-work)
+  * [Proof of cluster clean up](#proof-of-cluster-clean-up)
 
 
 
 ## Overview
 
 This project is part of the Udacity Azure ML Nanodegree.
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4a2bded0e1aa57b58c133c66679658c0f9171660
 In this project, I build and optimize an Azure ML pipeline using the Python SDK and a provided Scikit-learn model.
 This model is then compared to an Azure AutoML run.
 
 ## Summary
+<<<<<<< HEAD
 
-A subset of a standard machine learning dataset, with data about the direct marketing campaigns of a Portuguese banking institution, will be used to predict a client class. It provides 20 independent variables, both numerical and categorical, about bank clients, and a categorical dependant variables: has the client subscribed a term deposit? (binary: 'yes','no'). This last one variable is what I try to predict in this classifcation excersise.
+This is a subset of a standard machine learning dataset with data about the direct marketing campaigns of a Portuguese banking institution. It provides 20 independent variables, both numerical and categorical, about bank clients, and a categorical dependant variables: has the client subscribed a term deposit? (binary: 'yes','no'). This last one variable is what I try to predict in this classifcation excersise.
 
 To that end, I'm trying three diferent ways to get an accurate model:
 
@@ -34,10 +38,14 @@ To that end, I'm trying three diferent ways to get an accurate model:
 
 The process is summarised in the folowing diagram:
 
+![Alt text](./Proyecto1.svg)
 <img src="./Proyecto1.svg">
+
+=======
 
 This is a subset of a standard machine learning dataset with data about the direct marketing campaigns of a Portuguese banking institution. It provides 20 independent variables, both numerical and categorical, about bank clients, and a categorical dependant variables: has the client subscribed a term deposit? (binary: 'yes','no'). This last one variable is what I try to predict in this classifcation excersise.
 
+>>>>>>> 4a2bded0e1aa57b58c133c66679658c0f9171660
 The best performing model I found was a VotingEnsemble, generated in the AutoML part of the AzureML experiment, that got a 0.9161 of accuracy. It must be said that best models were all in the range between 0.911 and the above mentioned 0.916.
 
 
@@ -80,6 +88,7 @@ Votig Ensemble is a class that can't be invoqued directly, but can be specified 
 
 In this case, it's a default AutoML uses once it has run several models. If I understood this right, this implementation uses a soft voting mechanism, summing up the predicted probabilities for class labels in the previous tested models, and predicting the class label with the largest sum probability.
 
+
 ## Pipeline comparison
 
 As said, the AutoML Votign Ensemble model got an accuray of 0.91611, against an accuracy of 0.91163 of the HyperDrive model, and 0.91102 of the original script. So, the gain was a meager one, in the order of the thousandths.
@@ -97,3 +106,5 @@ Are there other classification algorithms that would merit a try? Since this is 
 Could different parameter sampling methods and policies bring a better result? As seen, there is at least another hyperparameter sampler (namely, Bayesian) that could be used, as well as two other stopping policies (Median and Trunaction Selectiona, as mentioned above) that would merit a try. Even, one can opt for a no termination policy, and let all training runs execute to completion. 
 
 And last, but not least: could a greater amount of minutes for timeout get a better result?
+
+
